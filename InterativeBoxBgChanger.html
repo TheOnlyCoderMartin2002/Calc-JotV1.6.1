@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <meta name="author" content="Martin Lalus">
+    <title>Interactive Boxes</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: indigo;
+        padding: 20px;
+        margin: 10px;
+      }
+      .main-content {
+        background-color: snow;
+        width: 90%;
+        height: 90%;
+        padding: 30px;
+      }
+      .box-wrapper {
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 0 auto;
+        width: 340px;
+        height: 340px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .box {
+        background-color: white;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .box:hover {
+       padding: 3.5px;
+       margin: 4px;
+      }
+      .box-1:hover {
+        background-color: red;
+      }
+      .box-2:hover {
+        background-color: green;
+      }
+      .box-3:hover {
+        background-color: blue;
+      }
+      .box-4:hover {
+        background-color: yellow;
+      }
+      .box-5:hover {
+        background-color: orange;
+      }
+      .box-6:hover {
+        background-color: green;
+      }
+      .box-7:hover {
+        background-color: purple;
+      }
+      .box-8:hover {
+        background-color: gold;
+      }
+      .box-9:hover {
+        background-color: maroon;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-content" id="main-content">
+      <section class="box-wrapper" id="box-wrapper">
+        <div class="box box-1" id="box-1"></div>
+        <div class="box box-2" id="box-2"></div>
+        <div class="box box-3" id="box-3"></div>
+        <div class="box box-4" id="box-4"></div>
+        <div class="box box-5" id="box-5"></div>
+        <div class="box box-6" id="box-6"></div>
+        <div class="box box-7" id="box-7"></div>
+        <div class="box box-8" id="box-8"></div>
+        <div class="box box-9" id="box-9"></div>
+      </section>
+    </main>
+    <script>
+      alert("update!! new styles..");
+      let mainContent = document.getElementById("main-content");
+      
+      document.getElementById("box-1").onclick = function() {
+        mainContent.style.backgroundColor = "red";
+      }
+      document.getElementById("box-2").onclick = function() {
+        mainContent.style.backgroundColor = "green";
+      }
+      document.getElementById("box-3").onclick = function() {
+        mainContent.style.backgroundColor = "blue";
+      }
+      document.getElementById("box-4").onclick = function() {
+        mainContent.style.backgroundColor = "yellow";
+      }
+      document.getElementById("box-5").onclick = function() {
+        mainContent.style.backgroundColor = "orange";
+      }
+      document.getElementById("box-6").onclick = function() {
+        mainContent.style.backgroundColor = "green";
+      }
+      document.getElementById("box-7").onclick = function() {
+        mainContent.style.backgroundColor = "purple";
+      }
+      document.getElementById("box-8").onclick = function() {
+        mainContent.style.backgroundColor = "gold";
+      }
+      document.getElementById("box-9").onclick = function() {
+        mainContent.style.backgroundColor = "maroon";
+      }  
+    </script>
+  </body>
+</html>

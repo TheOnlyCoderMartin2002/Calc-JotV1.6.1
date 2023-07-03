@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 300px;
+        height: 212px;
+        background-color: indigo;
+        border: 1.5px solid gold;
+        border-radius: 5px;
+        padding: 12px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .container:hover {
+        border: 2.5px solid gold;
+      }
+      .randomiser-btn {
+        width: 80%;
+        height: 40px;
+        background-color: lightblue;
+        border-radius: 5px;
+        border: none;
+        margin-top: 15px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: monospace, Arial, sans-serif;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+        transition: width 0.8s, height 0.8s, font-size 0.8s, background-color 0.7s;
+      }
+      .randomiser-btn:hover {
+        width: 90%;
+        height: 50px;
+        font-size: 17px;
+        background-color: darkred;
+        color: gold;
+        border: 2px solid gold;
+      }
+      .randomiser-output {
+        width: 100%;
+        height: 50%;
+        background-color: #008080;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .randomiser-output:hover {
+        border: 2px solid gold;
+      }
+      .output-value {
+        padding-top: 12px;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .custom-number-btn {
+        font-size: 15px;
+        font-weight: bold;
+        font-family: monospace, Arial, sans-serif;
+        padding: 3px 0 3px 0;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  </head>
+  <body>
+    <main>
+      <div class="container" id="container">
+        <button class="randomiser-btn" id="randomiser-btn">GENERATE</button>
+        <div class="randomiser-output" id="randomiser-output">
+          <h2 class="output-value" id="output-value"></h2>
+          <p id="hint-para" style="display: none; padding-bottom: 12px; font-family: monospace; font-weight: bold">(: Interact To Clear :)</p>
+        </div>
+      </div>
+    </main>
+    <script>
+      let randomiserBtn = document.getElementById("randomiser-btn");
+      let container = document.getElementById("container");
+      let randomValue;
+      let setNumber = 10; // default!
+      
+      alert("# This program displays a random number from the range that can now be custom set!\n# The default (start) number is 10 :)");
+
+      randomiserBtn.addEventListener("click", function() {
+          document.getElementById("output-value").style.display = "block";
+          document.getElementById("hint-para").style.display = "block";
+          
+          randomValue = Math.round(Math.random() * setNumber);
+          document.getElementById("randomiser-output").style.backgroundColor = "darkred";
+          document.getElementById("randomiser-output").style.color = "gold";
+          document.getElementById("output-value").innerHTML = "-- " + randomValue + " --";      
+          document.getElementById("randomiser-output").onclick = function() {
+            this.style.backgroundColor = "lightblue";
+            this.style.color = "black";
+            document.getElementById("output-value").style.display = "none";
+            document.getElementById("hint-para").style.display = "none";
+          }
+      })
+      const customNumberBtn = document.createElement("button");
+          customNumberBtn.innerHTML = "Change Limit";
+          customNumberBtn.setAttribute("class", "custom-number-btn");
+          customNumberBtn.onclick = function() {
+            const response = parseInt(prompt("Set a number: "));
+            setNumber = response;
+          }
+          container.appendChild(customNumberBtn);
+    </script>
+  </body>
+</html>

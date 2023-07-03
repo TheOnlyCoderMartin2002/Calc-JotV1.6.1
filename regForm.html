@@ -1,0 +1,206 @@
+<html>
+  <head>
+   <title>Registration Form</title>
+   <style>
+     * {
+       padding: 0;
+       margin: 0;
+       border-radius: 5px;
+       letter-spacing: 1.5px;
+       text-align: center;
+     }
+     label {
+       color: #F5DF4D;
+       font-size: 20px;
+       font-weight: bold;
+       font-family: monospace, Arial, Verdana, sans-serif;
+     }
+     input {
+       margin: 8px 0 8px 0;
+       padding: 5px 3px 5px 3px;
+       font-family: Arial, sans-serif;
+       font-weight: bold;
+       font-size: 16px;
+       border-radius: 10px;
+       transition: padding 1.1s;
+     }
+     input:hover {
+       background-image: linear-gradient(#FFA500, #FDAC53);
+       padding: 13px 7px 13px 7px;
+       margin: 10px 0 10px 0;
+     }
+     button {
+      background-image: url("night.jpg");
+      background-size: cover;
+      color: #56C6A9;
+     }
+     button:hover {
+       padding: 10px;
+       margin: 0;
+     }
+     body {
+       background-image: linear-gradient(#88B04B, #F7CAC9);
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding: 100px;
+     }
+     .top-header {
+       width: 60%;
+       height: fit-content;
+       background-image: url("night.jpg");
+       background-size: cover;
+       color: #FFA500;
+       padding: 20px;
+       margin-bottom: 50px;
+       border-radius: 5px;
+       box-shadow: 3px 7px 5px;
+     }
+     .top-header:hover {
+       border: 1.1px solid #FFA500;
+     }
+     .header-txt {
+       box-shadow: 3px 7px 3px;
+       padding: 5px;
+       letter-spacing: 3px;
+       font-size: 30px;
+       font-weight: bold;
+       font-family: monospace, Arial, Verdana, sans-serif;
+       transition: box-shadow 1.5s, padding 1s;
+     }
+     .header-txt:hover {
+       border: 0.5px solid black;
+       padding: 15px 0 15px 0;
+       box-shadow: 3px 7px 15px;
+     }
+     .reg-form-wrapper {
+       background-image: url("nightsky.jpg");
+       background-size: cover;
+       width: fit-content;
+       height: fit-content;
+       display: flex;
+       justify-content: center;
+       padding: 25px;
+       border: 8px solid aliceblue;
+       outline: #FA7A35 solid 12px;
+     }
+     .reg-btn {
+       padding: 5px;
+       background-color: lightgreen;
+       font-size: 20px;
+       font-weight: bold;
+       font-family: monospace, Arial, sans-serif;
+     }
+     .basic-details-box {
+       margin-right: 12px;
+       border-right: 3px solid yellow;
+       padding-right: 15px;
+       display: block;
+     }
+     .complete-reg-btn {
+       width: fit-content;
+       height: fit-content;
+       padding: 10px;
+       margin: 0 auto;
+       background: snow;
+     }
+     .security-details-box {
+       padding-left: 15px;
+       border-left: 3px solid yellow;
+     }
+     .sub-header {
+       margin-bottom: 15px;
+       color: lightgreen;
+       font-weight: bold;
+     }
+     .details-output {
+       width: 30%;
+       height: fit-content;
+       background-color: aliceblue;
+       color: darkblue;
+       padding: 25px;
+       border: 0.5px solid black;
+       transition: border 1.5s;
+     }
+     .details-output:hover {
+       border: 10px solid black;
+     }
+     .info-piece {
+       font-weight: bold;
+       font-size: 23px;
+       font-family: cursive, Arial, sans-serif;
+       color: red;
+       margin-bottom: 15px;
+     }
+   </style>
+  </head>
+  <body id="body">
+    <header class="top-header"><h2 class="header-txt" id="header-txt">REGISTER BELOW</h2></header>
+    <section class="reg-form-wrapper" id="reg-form-wrapper">
+      <div class="basic-details-box">
+        <label for="full-name"><em>[ FULL NAME ]</em></label><br>
+        <input type="text" id="full-name" placeholder="Bill Smith..."><br>
+        <label for="DOB-inp"><em>[ DATE OF BIRTH ]</em></label><br>
+        <input type="date" id="DOB-inp"><br>
+        <label for="occupation-inp"><em>[ YOUR OCCUPATION ]</em></label><br>
+        <input type="text" id="occupation-inp" placeholder="Warehouse Operative..."><br>
+        <label for="nationality-inp"><em>[ YOUR NATIONALITY ]</em></label><br>
+        <input type="text" id="nationality-inp" placeholder="British..."><br>
+        <label for="email-inp"><em>[ YOUR EMAIL ]</em></label><br>
+        <input type="email" id="email-inp" placeholder="billsmith1212@gmail.com..."><br>
+        <label for="password-inp"><em>[ CREATE PASSWORD ]</em></label><br>
+        <input type="password" id="password-inp" placeholder="burger1234..."><br>
+        <label for="confirm-password-inp"><em>[ CONFIRM PASSWORD ]</em></label><br>
+        <input type="password" id="confirm-password-inp" placeholder="burger1234"><br>
+      </div>
+      <div class="security-details-box">
+        <h3 class="sub-header">SECURITY CHECKS</h3>
+        <label for="security-qst-1">WHAT DID YOU NAME YOUR FIRST PET?</label><br>
+        <input type="text" id="security-qst-1" placeholder="Snowy..."><br>
+        <label for="security-qst-2">WHAT CITY WERE YOU BORN IN?</label><br>
+        <input type="text" id="security-qst-2" placeholder="London..."><br>
+        <label for="Verification-qst-1">WHAT IS 10 + 16?</label><br>
+        <input type="number" id="verification-qst-1" placeholder="???"><br>
+        <label for="verification-qst-2">IS 0.5 LESS THAN 0.3?</label><br>
+        <input type="text" id="verification-qst-2" placeholder="???" style="margin-bottom: 80px"><br>
+        <div class="complete-reg-btn">
+          <button class="reg-btn" id="reg-btn">REGISTER ME!!</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      let regBtn = document.getElementById("reg-btn");
+      let regWrapper = document.getElementById("reg-form-wrapper");
+      let body = document.getElementById("body");
+      let fullName = document.getElementById("full-name");
+      let DOBInp = document.getElementById("DOB-inp");
+      let occupationInp = document.getElementById("occupation-inp");
+      let nationalityInp = document.getElementById("nationality-inp");
+      let emailInp = document.getElementById("email-inp");
+      let passwordInp = document.getElementById("password-inp");
+      let confirmPasswordInp = document.getElementById("confirm-password-inp");
+      let securityQst1 = document.getElementById("security-qst-1");
+      let securityQst2 = document.getElementById("security-qst-2");
+      let verificationQst1 = document.getElementById("verification-qst-1");
+      let verificationQst2 = document.getElementById("verification-qst-2");
+      let userInfoArr = [fullName, DOBInp, occupationInp, nationalityInp, emailInp, passwordInp, confirmPasswordInp, securityQst1, securityQst2, verificationQst1, verificationQst2];
+
+      regBtn.onclick = function() {
+          regWrapper.style.display = "none";
+          document.getElementById("header-txt").textContent = "[ YOUR INFORMATION ]";
+
+          const detailsOutput = document.createElement("div");
+          detailsOutput.setAttribute("class", "details-output");
+          body.appendChild(detailsOutput);
+
+           for (let i = 0; i < userInfoArr.length; i++) {
+              const infoPiece = document.createElement("h3");
+              infoPiece.textContent = "# " + userInfoArr[i].value + " #";
+              infoPiece.setAttribute("class", "info-piece");
+              detailsOutput.appendChild(infoPiece);
+          }
+      }
+    </script>
+  </body>
+</html>
